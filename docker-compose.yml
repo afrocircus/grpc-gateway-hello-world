@@ -2,18 +2,18 @@ version: '3'
 services:
   backend:
     image: afrocircus/grpc-backend:main
-#    platform: linux/amd64
-#    build:
-#      context: ./
-#      dockerfile: ./grpc-backend/Dockerfile
+    platform: linux/amd64
+    build:
+      context: ./
+      dockerfile: ./grpc-backend/Dockerfile
     ports:
       - "8000:50051"
   gateway:
     image: afrocircus/grpc-gateway:main
-#    platform: linux/amd64
-#    build:
-#      context: ./
-#      dockerfile: ./grpc-gateway/Dockerfile
+    platform: linux/amd64
+    build:
+      context: ./
+      dockerfile: ./grpc-gateway/Dockerfile
     ports:
       - "80:80"
     depends_on:
